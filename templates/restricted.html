@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Restricted{% endblock %} 
+{% block body %}
+  <form action="./restricted" method="post">
+    <p>
+      <input type="hidden" id="csrf_token" name="csrf_token" value={{ csrf }} />
+      <button type="submit" id="request">Request Aphorism</button>
+    </p>
+  </form>
+{% endblock %}

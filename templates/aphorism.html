@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Aphorisms from The Zen of Python{% endblock %}
+{% block body %}
+  <!-- Wrap each aphorism in a <p>Paragraph element.</p> -->
+  {% for a in zen %}
+    <p>{{ a }}</p>
+  {% endfor %}
+  <p>
+    <a href="./restricted">Request more aphorisms</a>
+  </p>
+{% endblock %}
