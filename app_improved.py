@@ -39,10 +39,9 @@ HOST = "localhost"
 def login():
     username = sanitize(request.form.get('username', ''))
     password = sanitize(request.form.get('password', ''))
-    print("Username is: ", username)
 
     if request.method == 'POST':
-        credsAreValid = (username, password) in [('asdf', 'asdffdas'), ('asdf@hotmail.com', 't12024')]
+        credsAreValid = (username, password) in [('u1234567', 'csc2330a3')]
 
         # NOTE: If I enable this csrf validation, then test scripts complains because it's
         # not configured to test for a case with csrf_token. So, I'm disabling this
